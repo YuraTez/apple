@@ -339,6 +339,11 @@ textarea {
   background: #fff;
 }
 
+.question__btn img{
+  width: 32px;
+  height: 32px;
+}
+
 .tab-last {
   position: fixed;
   left: 0;
@@ -418,7 +423,7 @@ textarea {
     height: 58px;
   }
 
-  .question__btn svg{
+  .question__btn img{
     width: 24px;
     height: 24px;
   }
