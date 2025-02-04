@@ -666,8 +666,14 @@ textarea {
   }
 
   .main-btn .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 302px;
     max-height: 54px;
+    height: 54px;
+    padding: 0;
+    font-size: 18px;
   }
 }
 
