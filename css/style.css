@@ -11,6 +11,10 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   transition: .3s;
 }
