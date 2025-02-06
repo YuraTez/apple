@@ -5,9 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Apple Developer Accounts</title>
     <link rel="stylesheet" href="font/SFPro/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,23 +24,20 @@
 
         fbq('init', '511465388488445');
         fbq('track', 'PageView');
+        
+        $('.lead-button').click(function() {
+            fbq('track', 'isLead');
+            console.log('1')
+        });
 
-        // Отслеживание событий
-        document.addEventListener('click', function(event) {
-            // AddToCart: Пользователь скачивает PDF
-            if (event.target.matches('a.download-pdf')) {
-                fbq('track', 'AddToCart');
-            }
+        $('.whatsapp-link').click(function() {
+            fbq('track', 'Download');
+                console.log('2')
+        });
 
-            // Lead: Пользователь нажимает "Start Now" или "Get Instruction"
-            if (event.target.matches('.lead-button')) {
-                fbq('track', 'Lead');
-            }
-
-            // Purchase: Пользователь переходит в WhatsApp
-            if (event.target.matches('.whatsapp-link')) {
-                fbq('track', 'Purchase');
-            }
+        $('.download-pdf').click(function() {
+            fbq('track', 'Sale');
+            console.log('3')
         });
 
     </script>
@@ -380,7 +381,7 @@
                             <span>an Apple Developer Account</span>
                         </div>
                         <ol class="numbered-list">
-                            <li>Go to <a href="https://developer.apple.com">developer.apple.com</a></li>
+                            <li>Go to <a href="https://developer.apple.com" target="_blank">developer.apple.com</a></li>
                             <li>Click "Account" in the top right corner.</li>
                             <li>Log in using your newly created Apple ID.</li>
                             <li>Accept the agreements by checking the boxes and clicking Submit.</li>
@@ -432,10 +433,6 @@
     </footer>
 </div>
 
-<script
-        src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
