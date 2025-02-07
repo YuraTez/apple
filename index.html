@@ -25,21 +25,27 @@
 
         fbq('init', '511465388488445');
         fbq('track', 'PageView');
-        
-        $('.lead-button').click(function() {
-            fbq('track', 'isLead');
-            console.log('1')
+
+        $(document).ready(function() {
+
+            $('.lead-button').click(function() {
+                fbq('track', 'isLead');
+
+            });
+
+            $('.whatsapp-link').click(function() {
+                fbq('track', 'Download');
+
+            });
+
+            $('.download-pdf').click(function() {
+                fbq('track', 'Sale');
+
+            });
+
         });
 
-        $('.whatsapp-link').click(function() {
-            fbq('track', 'Download');
-                console.log('2')
-        });
 
-        $('.download-pdf').click(function() {
-            fbq('track', 'Sale');
-            console.log('3')
-        });
 
     </script>
     <noscript>
