@@ -58,3 +58,8 @@ $(".restart-question").on("click", function() {
     firstTab.addClass("active");
     $(".question__img[data-tab='1']").addClass("active");
 });
+
+
+$(".whatsapp-link").on("click" , ()=>{
+    window.open('end.html', '_blank');
+})
